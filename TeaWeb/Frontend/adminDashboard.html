@@ -1,11 +1,151 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Cemos Lanka | Admin Dashboard</title>
     <link rel="icon" type="image/png" href="assets/headLogos/h1.png">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: #f4f4f4;
+        }
+
+        header {
+            background-color: #0b3d91;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .container {
+            padding: 30px;
+        }
+
+        h2 {
+            color: #0b3d91;
+        }
+
+        .product-card {
+            display: flex;
+            align-items: center;
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            padding: 15px;
+        }
+
+        .product-card img {
+            max-width: 120px;
+            margin-right: 20px;
+        }
+
+        .product-info {
+            flex-grow: 1;
+        }
+
+        .product-info h3 {
+            margin: 0;
+            font-size: 18px;
+        }
+
+        .product-info p {
+            margin: 5px 0;
+        }
+
+        .product-actions button {
+            background-color: #0b3d91;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-left: 10px;
+        }
+
+        .product-actions button:hover {
+            background-color: #092c6c;
+        }
+
+        form {
+            margin-top: 40px;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+        }
+
+        form input,
+        form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #aaa;
+            border-radius: 5px;
+        }
+
+        form button {
+            background-color: #28a745;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        form button:hover {
+            background-color: #218838;
+        }
+    </style>
 </head>
+
 <body>
-    <h1>Welcome to My Website</h1>
+    <header>Cemos Lanka Admin Dashboard</header>
+
+    <div class="container">
+        <h2>Manage Products</h2>
+
+        <div class="product-card">
+            <img src="ceylon_tea.png" alt="Ceylon Tea">
+            <div class="product-info">
+                <h3>Ceylon Tea</h3>
+                <p>Premium Ceylon tea from the lush hills of Sri Lanka.</p>
+                <p><strong>Price:</strong> Rs. 1500</p>
+            </div>
+            <div class="product-actions">
+                <button>Edit</button>
+                <button>Delete</button>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <img src="coffee.png" alt="Coffee">
+            <div class="product-info">
+                <h3>Coffee</h3>
+                <p>Aromatic Sri Lankan coffee grown in tropical highlands.</p>
+                <!-- No price shown if not added -->
+            </div>
+            <div class="product-actions">
+                <button>Edit</button>
+                <button>Delete</button>
+            </div>
+        </div>
+
+        <form>
+            <h2>Add New Product</h2>
+            <input type="text" placeholder="Product Name" required>
+            <textarea placeholder="Description" rows="4" required></textarea>
+            <input type="text" placeholder="Image Filename (e.g. tea.png)" required>
+            <input type="number" placeholder="Price (optional)">
+            <button type="submit">Add Product</button>
+        </form>
+    </div>
+
 </body>
+
 </html>

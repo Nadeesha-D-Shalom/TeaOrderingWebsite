@@ -1,0 +1,236 @@
+/* Reset & Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Header */
+.header {
+  background-color: #3e4e2c;
+  color: #fff;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+.nav {
+  display: flex;
+  gap: 20px;
+}
+.nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  position: relative;
+  padding-bottom: 5px;
+  transition: color 0.3s ease;
+}
+.nav a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #fff;
+  transition: width 0.3s ease;
+}
+.nav a:hover {
+  color: #ffdf6c;
+}
+.nav a:hover::after {
+  width: 100%;
+}
+
+/* Hero */
+.hero {
+  background: url('images/tea-banner.jpg') no-repeat center center/cover;
+  color: white;
+  text-align: center;
+  padding: 100px 20px;
+  background-color: #6b8e23;
+}
+.hero h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+.hero p {
+  font-size: 20px;
+}
+
+/* Products */
+.products {
+  padding: 60px 20px;
+  background-color: #fff;
+  text-align: center;
+}
+.products h2 {
+  font-size: 36px;
+  margin-bottom: 30px;
+  color: #3e4e2c;
+}
+.product-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.product {
+  background-color: #e0f2e9;
+  padding: 30px;
+  border-radius: 8px;
+  min-width: 200px;
+  font-size: 18px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* About */
+.about {
+  background-color: #e8f5e9;
+  padding: 60px 20px;
+  text-align: center;
+}
+.about h2 {
+  font-size: 32px;
+  color: #3e4e2c;
+  margin-bottom: 20px;
+}
+
+/* Testimonials */
+.testimonials {
+  background-color: #fdf6e3;
+  padding: 60px 20px;
+  text-align: center;
+}
+.testimonials h2 {
+  font-size: 32px;
+  color: #3e4e2c;
+  margin-bottom: 20px;
+}
+.testimonial-list {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.testimonial {
+  background-color: #fff;
+  padding: 20px;
+  border-left: 5px solid #3e4e2c;
+  max-width: 300px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Gallery */
+.gallery {
+  padding: 60px 20px;
+  background-color: #f5f5f5;
+  text-align: center;
+}
+.gallery h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+.gallery-list img {
+  margin: 10px;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+.gallery-list img:hover {
+  transform: scale(1.05);
+}
+
+/* Contact */
+.contact {
+  background-color: #ede7f6;
+  padding: 60px 20px;
+  text-align: center;
+}
+.contact h2 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+/* Newsletter */
+.newsletter {
+  background-color: #d0f0c0;
+  padding: 60px 20px;
+  text-align: center;
+}
+.newsletter h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+.newsletter input[type="email"] {
+  padding: 10px;
+  width: 250px;
+  max-width: 90%;
+  margin-right: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.newsletter button {
+  padding: 10px 20px;
+  background-color: #3e4e2c;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.newsletter button:hover {
+  background-color: #2e3e1c;
+}
+
+/* Footer */
+footer {
+  background-color: #3e4e2c;
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+  font-size: 14px;
+}
+
+/* Special Animation for Home Menu Item */
+.nav a.home-link:hover {
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 5px #ffdf6c, 0 0 10px #ffdf6c;
+  }
+  to {
+    text-shadow: 0 0 10px #fff700, 0 0 20px #fff700;
+  }
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+  }
+  .nav {
+    flex-direction: column;
+    width: 100%;
+  }
+  .nav a {
+    margin: 10px 0;
+  }
+}

@@ -4,8 +4,13 @@ session_start();
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Admin Dashboard - TeaWeb</title>
+  <title>CEYMOS LANKA Admin Dashboard</title>
+	<meta charset="utf-8">
+    <link rel="icon" type="image/png" href="assets/headLogos/h1.png">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
   <style>
     * {
       margin: 0;
@@ -121,7 +126,7 @@ session_start();
 
     function logout() {
       alert("Logging out...");
-      window.location.href = "../index.html"; // update to your logout path if needed
+      window.location.href = "admin_login.php"; // update to your logout path if needed
     }
   </script>
 

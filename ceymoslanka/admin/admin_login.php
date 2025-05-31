@@ -13,7 +13,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if ($result && $result->num_rows == 1) {
         $_SESSION['admin_username'] = $username;
-        header("Location: admin/admin_dashboard.php");
+        header("Location: admin_dashboard.php");
         exit();
     } else {
         $error = "Invalid username or password!";
@@ -48,7 +48,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 				<div class="col-md-6 col-lg-4">
 					<div class="login-wrap p-0">
 						<h3 class="mb-4 text-center">Have an account?</h3>
-						<form action="login.php" method="POST" class="signin-form">
+
+
+						<form action="" method="POST" class="signin-form">
+
+
 							<div class="form-group">
 								<input type="text" name="username" class="form-control" placeholder="Username" required>
 							</div>

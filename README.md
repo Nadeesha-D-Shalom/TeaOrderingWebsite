@@ -1,131 +1,60 @@
-TeaWeb - Product Showcase Website with Admin Dashboard
-TeaWeb is a professional tea product showcase website built for a real-world client.
-This project includes:
+TeaWeb - Product Showcase Website with Admin Panel
 
-✅ Frontend — clean, responsive product pages
-✅ Admin Login System — secure login with PHP + MySQL
-✅ Admin Dashboard — to manage products and admin tasks
+This is a simple tea product showcase website with a secure Admin Login and Admin Dashboard, built for a real-world client.
 
-📂 Project Structure
-bash
-Copy
-Edit
-TeaWeb/
-├── index.html           # Main website (frontend)
-├── coconut.html         # Coconut product page
-├── assets/              # Images, CSS
-│   ├── headLogos/
-│   ├── bgImage/
-│   └── style.css
-├── admin/               # Admin panel
-│   ├── admin_login.php  # Admin login page
-│   ├── admin_dashboard.php  # Admin dashboard
-│   ├── add_product.php
-│   ├── edit_product.php
-│   ├── delete_product.php
-│   ├── view_products.php
-├── uploads/             # Uploaded product images
-├── db.php               # Database connection
-🚀 Features
-Secure Admin Login (PHP + MySQL)
+Features
+Product showcase (Tea, Coconut, Spices, Rice)
 
-Protected Admin Dashboard with session check
+Admin login (PHP + MySQL)
 
-Sidebar with:
-
-Tea Product Manager
-
-Coconut Product Manager
-
-Spices Product Manager
-
-Rice Product Manager
-
-Admin Manager
-
-Real-time Date & Time
-
-Logout button
-
-Product Management:
+Admin dashboard to manage products
 
 Add / Edit / Delete products
 
-Image upload
+Upload product images
 
-Optional price display
+Date and time display
 
-Clean custom CSS, no external frameworks used
+Logout button
 
-Responsive design (desktop & mobile)
+Responsive design (HTML, CSS, JS)
 
-Ready for deployment to GoDaddy Shared Hosting
+No external frameworks used
 
-🛠 Technologies Used
-HTML5
+Technologies
+HTML
 
-CSS3
+CSS
 
 JavaScript
 
-PHP 8.x
+PHP
 
 MySQL
 
-XAMPP (local development)
+XAMPP (for local testing)
 
-⚙️ How to Run Locally
-1️⃣ Clone the repo:
+How to Run
+Place project folder in C:/xampp/htdocs/TeaWeb/
 
-bash
-Copy
-Edit
-git clone https://github.com/yourusername/TeaWeb.git
-2️⃣ Import database:
+Create database tea_ordering_db and import tables
 
-Open phpMyAdmin
+Configure db.php with your database details
 
-Create database: tea_ordering_db
+Run:
 
-Import tea_ordering_db.sql (exported from your XAMPP/phpMyAdmin)
+http://localhost/TeaWeb/index.html → Main site
 
-3️⃣ Configure database:
+http://localhost/TeaWeb/admin/admin_login.php → Admin login
 
-Edit db.php:
 
-php
-Copy
-Edit
-$host = "localhost";
-$user = "root";
-$password = "";
-$dbname = "tea_ordering_db";
-4️⃣ Run in browser:
-
-bash
-Copy
-Edit
-http://localhost/TeaWeb/index.html               # Frontend
-http://localhost/TeaWeb/admin/admin_login.php     # Admin login
-👥 Admin Login Credentials (Demo)
-text
+Admin Login (Demo)
+yaml
 Copy
 Edit
 Username: admin
 Password: 1234
-🌐 Deployment
-The project is designed to deploy to GoDaddy Shared Hosting:
+Deployment
+Project ready for deployment on GoDaddy Shared Hosting.
 
-Upload TeaWeb/ contents to /public_html/ via FileZilla.
-
-Import database to GoDaddy's MySQL (cPanel).
-
-💻 Author
-Nadeesha D Shalom
-LinkedIn: [Your LinkedIn URL]
-GitHub: [Your GitHub URL]
-
-📜 License
-This project is developed for educational and client purposes.
-Do not copy for commercial use without permission.
-
+That’s it — simple, professional.

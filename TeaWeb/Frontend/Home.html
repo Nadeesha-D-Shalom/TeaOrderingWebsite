@@ -1,20 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta charset="UTF-8">
     <title>Ceymos - Importers of Ceylon Quality</title>
-    <link rel="icon" type="image/png" href=" h1.png">
+    <link rel="icon" type="image/png" href="assets/headLogos/h1.png">
 
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=package_2" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=package_2" />
 
     <!-- Bootstrap CSS -->
     <link href=" https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- FontAwesome -->
     <link href=" https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <meta author="Nadeesha D Shalom">
+
 
     <style>
         :root {
@@ -45,7 +52,12 @@
             overflow-x: hidden;
         }
 
-        h1, h2, h3, h4, h5, h6 {
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
             font-family: 'Playfair Display', serif;
             font-weight: 600;
             color: var(--black);
@@ -130,7 +142,8 @@
             width: 80px;
             height: 80px;
             margin-right: 10px;
-            object-fit: contain; /* ensures it fits without stretching */
+            object-fit: contain;
+            /* ensures it fits without stretching */
         }
 
 
@@ -156,14 +169,24 @@
 
         /* Logo float animation */
         @keyframes logoFloat {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-5px); }
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-5px);
+            }
         }
 
         @keyframes logoFloat {
-            0%, 100% {
+
+            0%,
+            100% {
                 transform: translateY(0) scale(1);
             }
+
             50% {
                 transform: translateY(-3px) scale(1.03);
             }
@@ -187,9 +210,11 @@
                 transform: scale(0.9);
                 opacity: 0;
             }
+
             50% {
                 opacity: 0.3;
             }
+
             100% {
                 transform: scale(1.1);
                 opacity: 0;
@@ -229,7 +254,7 @@
 
         /* Hero section */
         .hero {
-            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('home2.jpg ') center/cover no-repeat;
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('assets/HomePage/home2.jpg ') center/cover no-repeat;
             height: 100vh;
             min-height: 600px;
             color: var(--white);
@@ -251,7 +276,7 @@
             font-size: 4rem;
             margin-bottom: 1rem;
             color: var(--white);
-            text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
         }
 
         .hero-content p {
@@ -283,7 +308,7 @@
             color: var(--white);
             border-color: var(--white);
             transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
         }
 
         .btn-primary {
@@ -327,19 +352,20 @@
         .product-card p {
             margin-bottom: 1.2rem;
         }
+
         /* Product Row Styling */
         .product-row {
             background: var(--white);
             border-radius: 10px;
             padding: 2rem;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
             transition: all 0.3s ease;
             margin-bottom: 2rem;
         }
 
         .product-row:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
         }
 
         .product-content {
@@ -351,6 +377,7 @@
             .product-row:nth-child(even) .col-md-6:first-child {
                 order: 2;
             }
+
             .product-row:nth-child(even) .col-md-6:last-child {
                 order: 1;
             }
@@ -423,14 +450,14 @@
             padding: 2.5rem 1.5rem;
             border-radius: 10px;
             text-align: center;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
             transition: all 0.3s ease;
             margin-top: 1.5rem;
         }
 
         .stats-box:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
         }
 
         .stats-box i {
@@ -448,9 +475,11 @@
         .stats-box p {
             margin-bottom: 0;
         }
+
         .stats-box .counter {
             font-weight: bold;
-            color: #2e7d32; /* your theme blue */
+            color: #2e7d32;
+            /* your theme blue */
         }
 
 
@@ -547,7 +576,7 @@
             display: inline-block;
             width: 40px;
             height: 40px;
-            background: rgba(255,255,255,0.1);
+            background: rgba(255, 255, 255, 0.1);
             border-radius: 50%;
             text-align: center;
             line-height: 40px;
@@ -563,7 +592,7 @@
 
 
         .copyright {
-            border-top: 1px solid rgba(255,255,255,0.1);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
             padding-top: 2rem;
             margin-top: 1rem;
         }
@@ -584,13 +613,13 @@
             z-index: 999;
             cursor: pointer;
             transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
         }
 
         .back-to-top:hover {
             background-color: var(--primary-dark);
             transform: translateY(-3px);
-            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
         }
 
         /* Animations */
@@ -599,6 +628,7 @@
                 opacity: 0;
                 transform: translateY(20px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
@@ -640,11 +670,13 @@
 
             .logo {
                 margin-bottom: 15px;
-                animation: none; /* Disable animation on mobile */
+                animation: none;
+                /* Disable animation on mobile */
             }
 
             .logo::before {
-                display: none; /* Hide pulse effect on mobile */
+                display: none;
+                /* Hide pulse effect on mobile */
             }
 
             .nav-links {
@@ -692,388 +724,404 @@
 <body>
 
 
-<!-- Header -->
-<header>
-    <div class="header-container">
-        <div class="logo">
-            <img src="h1.png" alt="CEYMOS Logo" style="height: 40px; vertical-align: middle;">
-            CEYMOS LANKA
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <img src="assets/headLogos/h1.png" alt="CEYMOS Logo" style="height: 40px; vertical-align: middle;">
+                CEYMOS LANKA
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <!-- <li><a href="https://www.google.co.uk/"><i class="fab fa-whatsapp"></i></a></li> -->
+                </ul>
+            </nav>
         </div>
-        <nav>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#products">Products</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li><a href="https://www.google.co.uk/"><i class="fab fa-whatsapp"></i></a></li>
-            </ul>
-        </nav>
-    </div>
-</header>
+    </header>
 
 
-<!-- Hero -->
-<section id="home" class="hero">
-    <div class="hero-content">
-        <h1>Premium Ceylon Imports</h1>
-        <p>Tea, Spices, Coconut Products & More – Delivered Globally</p>
-        <a href="#products" class="btn"><i class="fas fa-store"></i> Explore Products</a>
-    </div>
-</section>
+    <!-- Hero -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Premium Ceylon Imports</h1>
+            <p>Tea, Spices, Coconut Products & More – Delivered Globally</p>
+            <a href="#products" class="btn"><i class="fas fa-store"></i> Explore Products</a>
+        </div>
+    </section>
 
 
-<!-- Products -->
-<section id="products" class="py-5">
-    <div class="container">
-        <h2 class="text-center mb-5">Our Products</h2>
+    <!-- Products -->
+    <section id="products" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Our Products</h2>
 
-        <!-- Product 1 - Ceylon Tea -->
-        <div class="product-row animate mb-5">
-            <div class="row align-items-center">
-                <div class="col-md-6">
-                    <img src="green.jpeg" class="img-fluid rounded shadow" alt="Ceylon Tea">
-                </div>
-                <div class="col-md-6">
-                    <div class="product-content">
-                        <h3>Ceylon Tea</h3>
-                        <p>Finest black and green teas from Sri Lanka, handpicked from the lush highlands of Nuwara Eliya. Ceylon tea is one of the most famous teas in the world, grown on the island of Sri Lanka. This island is one of the leaders in the world tea industry, which has an excellent reputation for the high quality of its products.</p>
-                        <a href="product-tea.html" class="btn btn-primary">View Details</a>
+            <!-- Product 1 - Ceylon Tea -->
+            <div class="product-row animate mb-5">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <img src="assets/HomePage/green.jpg" class="img-fluid rounded shadow" alt="Ceylon Tea">
+                    </div>
+                    <div class="col-md-6">
+                        <div class="product-content">
+                            <h3>Ceylon Tea</h3>
+                            <p>Finest black and green teas from Sri Lanka, handpicked from the lush highlands of Nuwara
+                                Eliya. Ceylon tea is one of the most famous teas in the world, grown on the island of
+                                Sri Lanka. This island is one of the leaders in the world tea industry, which has an
+                                excellent reputation for the high quality of its products.</p>
+                            <a href="product-tea.html" class="btn btn-primary">View Details</a>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
 
-        <!-- Product 2 - Coconut Goods -->
-        <div class="product-row animate mb-5">
-            <div class="row align-items-center">
-                <div class="col-md-6 order-md-2">
-                    <img src="EG.jpeg" class="img-fluid rounded shadow" alt="Coconut Products">
-                </div>
-                <div class="col-md-6 order-md-1">
-                    <div class="product-content">
-                        <h3>Coconut Products</h3>
-                        <p>Natural oil, milk, sugar & more – pure & organic products sourced directly from Sri Lankan farmers. All coconut products are grown and produced in Sri Lanka and have quality certificates.</p>
-                        <a href="coconut.html" class="btn btn-primary">View Details</a>
+            <!-- Product 2 - Coconut Goods -->
+            <div class="product-row animate mb-5">
+                <div class="row align-items-center">
+                    <div class="col-md-6 order-md-2">
+                        <img src="assets/HomePage/coco.jpg" class="img-fluid rounded shadow" alt="Coconut Products">
+                    </div>
+                    <div class="col-md-6 order-md-1">
+                        <div class="product-content">
+                            <h3>Coconut Products</h3>
+                            <p>Natural oil, milk, sugar & more – pure & organic products sourced directly from Sri
+                                Lankan farmers. All coconut products are grown and produced in Sri Lanka and have
+                                quality certificates.</p>
+                            <a href="coconut.html" class="btn btn-primary">View Details</a>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
 
-        <!-- Product 3 - Spices -->
-        <div class="product-row animate">
-            <div class="row align-items-center">
-                <div class="col-md-6">
-                    <img src="fbop.jpeg" class="img-fluid rounded shadow" alt="Spices">
-                </div>
-                <div class="col-md-6">
-                    <div class="product-content">
-                        <h3>Spices</h3>
-                        <p>Authentic cinnamon, cardamom, pepper and more – the true flavors of Ceylon's spice gardens. Sri Lankan spices are renowned worldwide for their aroma and medicinal properties.</p>
-                        <a href="Spices.html" class="btn btn-primary">View Details</a>
+            <!-- Product 3 - Cinnamon -->
+            <div class="product-row animate">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <img src="assets/HomePage/cino.jpg" class="img-fluid rounded shadow" alt="Spices">
+                    </div>
+                    <div class="col-md-6">
+                        <div class="product-content">
+                            <h3>Cinnamon</h3>
+                            <p>Ceylon cinnamon is a spice for true connoisseurs. Harvesting time is 1.2 – 2 years. Sri
+                                Lankan cinnamon is renowned worldwide for their aroma and medicinal properties.</p>
+                            <a href="Spices.html" class="btn btn-primary">View Details</a>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
 
-        <div class="product-row animate mb-5">
-            <div class="row align-items-center">
-                <div class="col-md-6 order-md-2">
-                    <img src="EG.jpeg" class="img-fluid rounded shadow" alt="Coconut Products">
-                </div>
-                <div class="col-md-6 order-md-1">
-                    <div class="product-content">
-                        <h3>Rice</h3>
-                        <p>Natural oil, milk, sugar & more – pure & organic products sourced directly from Sri Lankan farmers. All coconut products are grown and produced in Sri Lanka and have quality certificates.</p>
-                        <a href="Rice.html" class="btn btn-primary">View Details</a>
+            <div class="product-row animate mb-5">
+                <div class="row align-items-center">
+                    <div class="col-md-6 order-md-2">
+                        <img src="assets/HomePage/rice.jpg" class="img-fluid rounded shadow" alt="Coconut Products">
+                    </div>
+                    <div class="col-md-6 order-md-1">
+                        <div class="product-content">
+                            <h3>Rice</h3>
+                            <p>Natural oil, milk, sugar & more – pure & organic products sourced directly from Sri
+                                Lankan farmers. All coconut products are grown and produced in Sri Lanka and have
+                                quality certificates.</p>
+                            <a href="Rice.html" class="btn btn-primary">View Details</a>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
 
-    </div>
+        </div>
         <div class="text-center mt-5">
             <a href="all-products.html" class="btn btn-primary">View All Products</a>
         </div>
 
 
-</section>
+    </section>
 
 
-<!-- About -->
-<section id="about" class="py-5 about-section">
-    <div class="container">
-        <h2 class="text-center mb-5">About Our Company</h2>
-        <div class="row">
-            <div class="col-lg-6">
-                <img src="pritindra-das-hIY-acW8e3w-unsplash.jpg" alt="Ceylon tea workers" class="img-fluid about-img">
-            </div>
+    <!-- About -->
+    <section id="about" class="py-5 about-section">
+        <div class="container">
+            <h2 class="text-center mb-5">About Our Company</h2>
+            <div class="row">
+                <div class="col-lg-6">
+                    <img src="assets/HomePage/about.jpg" alt="Ceylon tea workers" class="img-fluid about-img">
+                </div>
 
-            <div class="col-lg-6">
-                <div class="about-content">
-                    <p class="lead"> Welcome to Ceymos Lanka.</p>
-                    <p>Your gateway to the finest Ceylon tea, spices, and coconut products, straight from the heart of Sri Lanka.
-                        Rooted in over 30 years of family tradition, Ceymos is more than a business — it's a legacy. While our Sri Lankan branch has been proudly operating for 1 year, our roots stretch deep, with trusted partners and sister companies in Japan, China.</p>
-                    <p class="lead">Sri Lankan Excellence</p>
-                    <p>Our tea is grown in the lush, high-altitude estates of Sri Lanka, handpicked and processed with care to preserve its rich aroma and bold flavor. We combine traditional expertise with modern quality standards to bring you world-class Ceylon tea.</p>
+                <div class="col-lg-6">
+                    <div class="about-content">
+                        <p class="lead"> Welcome to Ceymos Lanka.</p>
+                        <p>Your gateway to the finest Ceylon tea, spices, and coconut products, straight from the heart
+                            of Sri Lanka.
+                            Rooted in over 30 years of family tradition, Ceymos is more than a business — it's a legacy.
+                            While our Sri Lankan branch has been proudly operating for 1 year, our roots stretch deep,
+                            with trusted partners and sister companies in Japan, China.</p>
+                        <p class="lead">Sri Lankan Excellence</p>
+                        <p>Our tea is grown in the lush, high-altitude estates of Sri Lanka, handpicked and processed
+                            with care to preserve its rich aroma and bold flavor. We combine traditional expertise with
+                            modern quality standards to bring you world-class Ceylon tea.</p>
 
+                    </div>
                 </div>
             </div>
+            <div class="core-values mt-4">
+                <h4>Our Core Values</h4>
+                <ul class="list-unstyled">
+                    <li><i class="fas fa-check-circle text-success"></i> Commitment to quality and authenticity</li>
+                    <li><i class="fas fa-check-circle text-success"></i> Sustainable and ethical sourcing</li>
+                    <li><i class="fas fa-check-circle text-success"></i> Customer satisfaction above all</li>
+                    <li><i class="fas fa-check-circle text-success"></i> Preserving traditional production methods</li>
+                    <li><i class="fas fa-check-circle text-success"></i> Transparency in all our operations</li>
+                </ul>
+            </div>
+
+            <div class="row mt-5 text-center">
+                <div class="col-md-4">
+                    <div class="stats-box animate">
+                        <i class="fas fa-history fa-2x text-primary mb-2"></i>
+                        <h3><span class="counter" data-target="30">0</span>+ Years</h3>
+                        <p>Of experience in the Ceylon products market</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="stats-box animate">
+                        <i class="fas fa-globe-asia fa-2x text-primary mb-2"></i>
+                        <h3><span class="counter" data-target="4">0</span> Countries</h3>
+                        <p>Delivering quality products to the global market</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="stats-box animate">
+                        <i class="fas fa-box-open fa-2x text-primary mb-2"></i> <!-- Updated icon -->
+                        <h3><span class="counter" data-target="15">0</span> + Product Varieties</h3>
+                        <p>Carefully curated for diverse customer needs</p>
+                    </div>
+                </div>
+            </div>
+
         </div>
-        <div class="core-values mt-4">
-            <h4>Our Core Values</h4>
-            <ul class="list-unstyled">
-                <li><i class="fas fa-check-circle text-success"></i> Commitment to quality and authenticity</li>
-                <li><i class="fas fa-check-circle text-success"></i> Sustainable and ethical sourcing</li>
-                <li><i class="fas fa-check-circle text-success"></i> Customer satisfaction above all</li>
-                <li><i class="fas fa-check-circle text-success"></i> Preserving traditional production methods</li>
-                <li><i class="fas fa-check-circle text-success"></i> Transparency in all our operations</li>
-            </ul>
-        </div>
+    </section>
 
-        <div class="row mt-5 text-center">
-            <div class="col-md-4">
-                <div class="stats-box animate">
-                    <i class="fas fa-history fa-2x text-primary mb-2"></i>
-                    <h3><span class="counter" data-target="30">0</span>+ Years</h3>
-                    <p>Of experience in the Ceylon products market</p>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="stats-box animate">
-                    <i class="fas fa-globe-asia fa-2x text-primary mb-2"></i>
-                    <h3><span class="counter" data-target="4">0</span> Countries</h3>
-                    <p>Delivering quality products to the global market</p>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="stats-box animate">
-                    <i class="fas fa-box-open fa-2x text-primary mb-2"></i> <!-- Updated icon -->
-                    <h3><span class="counter" data-target="15">0</span> + Package Varieties</h3>
-                    <p>Carefully curated for diverse customer needs</p>
-                </div>
-            </div>
-        </div>
+    <!-- Contact -->
+    <section id="contact" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-4">Get In Touch</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="contact-info">
+                        <p><i class="fas fa-map-marker-alt"></i> <span>Ceymos Lanka Pvt ltd, Dickland Gardens, Sri Jayawardenepura Kotte</span>
+                        </p>
+                        <p><i class="fas fa-phone"></i> <span>+94 xxx xxxx</span></p>
+                        <p><i class="fas fa-envelope"></i> <span>ceymos.lanka@gmail.com</span></p>
+                        <p><i class="fas fa-clock"></i> <span>Monday - Friday: 9:00 AM - 5:00 PM</span></p>
+                    </div>
 
-    </div>
-</section>
-
-<!-- Contact -->
-<section id="contact" class="py-5 bg-light">
-    <div class="container">
-        <h2 class="text-center mb-4">Get In Touch</h2>
-        <div class="row">
-            <div class="col-md-6">
-                <div class="contact-info">
-                    <p><i class="fas fa-map-marker-alt"></i> <span>SLIIT, New Kandy Rd, Malabe , Sri Lanka</span></p>
-                    <p><i class="fas fa-phone"></i> <span>+94 xxx xxxx</span></p>
-                    <p><i class="fas fa-envelope"></i> <span>example@gmail.com</span></p>
-                    <p><i class="fas fa-clock"></i> <span>Monday - Friday: 9:00 AM - 5:00 PM</span></p>
-                </div>
-
-                <div class="mt-4">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126743.5859318108!2d79.8562055!3d6.9146817!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae256db1a6771c5%3A0x2c63e344ab9a7536!2sSri%20Lanka%20Institute%20of%20Information%20Technology!5e0!3m2!1sen!2slk!4v1623930409208!5m2!1sen!2slk"
+                    <div class="mt-4">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d990.2735095467934!2d79.94400869949162!3d6.879336631692178!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae250c02bf9eff9%3A0x3613a11ed7dcf6c0!2sVWHV%2BPJQ%2C%20Dickland%20Gardens%2C%20Sri%20Jayawardenepura%20Kotte!5e0!3m2!1sen!2slk!4v1748812736287!5m2!1sen!2slk"
                             width="100%" height="250" style="border:0; border-radius: 8px;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <form>
+                        <div class="form-group">
+                            <input class="form-control" type="text" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input class="form-control" type="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input class="form-control" type="text" placeholder="Subject">
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control" rows="5" placeholder="Your Message" required></textarea>
+                        </div>
+                        <button class="btn btn-primary btn-block" type="submit">Send Message <i
+                                class="fas fa-paper-plane ml-2"></i></button>
+                    </form>
                 </div>
             </div>
-            <div class="col-md-6">
-                <form>
-                    <div class="form-group">
-                        <input class="form-control" type="text" placeholder="Your Name" required>
+        </div>
+    </section>
+
+    <div class="advertisement">
+        <a href="https://your-ad-link.com" target="_blank">
+            <img src="assets/HomePage/image-upscaled.jpeg" alt="Tea plantation" class="img-fluid about-img">
+        </a>
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="text-light pt-5 pb-4">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-lg-4 mb-4">
+                    <h5>Ceymos Lanka</h5>
+                    <p>Importers of premium Ceylon products including tea, spices, and coconut goods. Delivering quality
+                        globally since 1990.</p>
+                    <div class="mt-3">
+                        <!-- <a href="#" class="btn btn-outline-light btn-sm">Our Certifications</a> -->
                     </div>
-                    <div class="form-group">
-                        <input class="form-control" type="email" placeholder="Your Email" required >
+                </div>
+
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h5>Quick Links</h5>
+                    <a href="#home">Home</a>
+                    <a href="#products">Products</a>
+                    <a href="#about">About Us</a>
+                    <a href="#contact">Contact</a>
+                    <a href="#">Blog</a>
+                    <a href="#">FAQ</a>
+                </div>
+
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h5>Products</h5>
+                    <a href="product-tea.html">Ceylon Tea</a>
+                    <a href="coconut.html">Coconut Products</a>
+                    <a href="Spices.html">Spices</a>
+                </div>
+
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h5>Connect With Us</h5>
+                    <div class="social-links mt-3">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
                     </div>
-                    <div class="form-group">
-                        <input class="form-control" type="text" placeholder="Subject">
-                    </div>
-                    <div class="form-group">
-                        <textarea class="form-control" rows="5" placeholder="Your Message" required></textarea>
-                    </div>
-                    <button class="btn btn-primary btn-block" type="submit">Send Message <i class="fas fa-paper-plane ml-2"></i></button>
-                </form>
+
+
+                </div>
+
+            </div>
+            <div class="row mt-4 copyright">
+                <div class="col text-center">
+                    <small> &copy; 2025 Ceymos Lanka. All rights reserved. | <a href="#">Privacy Policy</a> | <a
+                            href="#">Terms of Service</a></small>
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </footer>
 
-<div class="advertisement">
-    <a href="https://your-ad-link.com" target="_blank">
-        <img src="image-upscaled.jpeg" alt="Tea plantation" class="img-fluid about-img">
+    <!-- Back to top button -->
+    <a href="#" class="back-to-top" id="backToTopBtn" title="Go to top">
+        <i class="fas fa-chevron-up"></i>
     </a>
 
-</div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
 
-<!-- Footer -->
-<footer class="text-light pt-5 pb-4">
-    <div class="container">
-        <div class="row">
+    <script>
+        // Back to top button functionality
+        const backToTopBtn = document.getElementById('backToTopBtn');
+        if (backToTopBtn) {
+            window.onscroll = () => {
+                if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+                    backToTopBtn.style.display = "block";
+                } else {
+                    backToTopBtn.style.display = "none";
+                }
+            };
 
-            <div class="col-lg-4 mb-4">
-                <h5>Ceymos Lanka</h5>
-                <p>Importers of premium Ceylon products including tea, spices, and coconut goods. Delivering quality globally since 2000.</p>
-                <div class="mt-3">
-                    <a href="#" class="btn btn-outline-light btn-sm">Our Certifications</a>
-                </div>
-            </div>
-
-            <div class="col-lg-2 col-md-6 mb-4">
-                <h5>Quick Links</h5>
-                <a href="#home">Home</a>
-                <a href="#products">Products</a>
-                <a href="#about">About Us</a>
-                <a href="#contact">Contact</a>
-                <a href="#">Blog</a>
-                <a href="#">FAQ</a>
-            </div>
-
-            <div class="col-lg-3 col-md-6 mb-4">
-                <h5>Products</h5>
-                <a href="#">Ceylon Tea</a>
-                <a href="#">Coconut Products</a>
-                <a href="#">Spices</a>
-                <a href="#">Ayurvedic Products</a>
-                <a href="#">Specialty Foods</a>
-                <a href="#">New Arrivals</a>
-            </div>
-
-            <div class="col-lg-3 col-md-6 mb-4">
-                <h5>Connect With Us</h5>
-                <div class="social-links mt-3">
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-youtube"></i></a>
-                    <a href="#"><i class="fab fa-whatsapp"></i></a>
-                </div>
-
-
-            </div>
-
-        </div>
-        <div class="row mt-4 copyright">
-            <div class="col text-center">
-                <small> &copy; 2025 Ceymos Lanka. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></small>
-            </div>
-        </div>
-    </div>
-</footer>
-
-<!-- Back to top button -->
-<a href="#" class="back-to-top" id="backToTopBtn" title="Go to top">
-    <i class="fas fa-chevron-up"></i>
-</a>
-
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
-
-<script>
-    // Back to top button functionality
-    const backToTopBtn = document.getElementById('backToTopBtn');
-    if (backToTopBtn) {
-        window.onscroll = () => {
-            if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
-                backToTopBtn.style.display = "block";
-            } else {
-                backToTopBtn.style.display = "none";
-            }
-        };
-
-        backToTopBtn.onclick = (e) => {
-            e.preventDefault();
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        };
-    }
-
-    // Header scroll effect
-    const header = document.querySelector('header');
-    window.addEventListener('scroll', function() {
-        if (window.scrollY > 50) {
-            header.style.padding = '0.5em 0';
-            header.style.boxShadow = '0 2px 15px rgba(0,0,0,0.2)';
-        } else {
-            header.style.padding = '1em 0';
-            header.style.boxShadow = '0 2px 10px rgba(0,0,0,0.1)';
+            backToTopBtn.onclick = (e) => {
+                e.preventDefault();
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            };
         }
-    });
 
-    // Enhanced scroll animations with staggered effects
-    function animateOnScroll() {
-        const elements = document.querySelectorAll('.animate:not(.product-row)');
-        elements.forEach(element => {
-            const elementPosition = element.getBoundingClientRect().top;
-            const screenPosition = window.innerHeight / 1.3;
-            if (elementPosition < screenPosition) {
-                element.style.opacity = '1';
-                element.style.transform = 'translateY(0)';
-            }
-        });
-
-        const productRows = document.querySelectorAll('.product-row.animate');
-        const delayBetween = 300;
-
-        productRows.forEach((row, index) => {
-            const rowPosition = row.getBoundingClientRect().top;
-            const screenPosition = window.innerHeight / 1.3;
-            if (rowPosition < screenPosition) {
-                setTimeout(() => {
-                    row.style.opacity = '1';
-                    row.style.transform = 'translateY(0)';
-                }, index * delayBetween);
-            }
-        });
-    }
-
-    // Initialize all animate elements
-    document.querySelectorAll('.animate').forEach(el => {
-        el.style.opacity = '0';
-        el.style.transform = 'translateY(30px)';
-        el.style.transition = 'all 0.8s cubic-bezier(0.25, 0.8, 0.25, 1)';
-        if (el.classList.contains('product-row')) {
-            el.style.transitionDelay = '0s';
-        }
-    });
-
-    // Counter animation
-    const counters = document.querySelectorAll('.counter');
-    const options = { threshold: 0.6 };
-
-    const animateCounter = (counter) => {
-        const updateCount = () => {
-            const target = +counter.getAttribute('data-target');
-            const count = +counter.innerText;
-            const speed = 100;
-            const increment = target / speed;
-
-            if (count < target) {
-                counter.innerText = Math.ceil(count + increment);
-                setTimeout(updateCount, 150);
+        // Header scroll effect
+        const header = document.querySelector('header');
+        window.addEventListener('scroll', function () {
+            if (window.scrollY > 50) {
+                header.style.padding = '0.5em 0';
+                header.style.boxShadow = '0 2px 15px rgba(0,0,0,0.2)';
             } else {
-                counter.innerText = target;
-            }
-        };
-        updateCount();
-    };
-
-    const observer = new IntersectionObserver((entries, obs) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                animateCounter(entry.target);
-                obs.unobserve(entry.target);
+                header.style.padding = '1em 0';
+                header.style.boxShadow = '0 2px 10px rgba(0,0,0,0.1)';
             }
         });
-    }, options);
 
-    counters.forEach(counter => {
-        observer.observe(counter);
-    });
+        // Enhanced scroll animations with staggered effects
+        function animateOnScroll() {
+            const elements = document.querySelectorAll('.animate:not(.product-row)');
+            elements.forEach(element => {
+                const elementPosition = element.getBoundingClientRect().top;
+                const screenPosition = window.innerHeight / 1.3;
+                if (elementPosition < screenPosition) {
+                    element.style.opacity = '1';
+                    element.style.transform = 'translateY(0)';
+                }
+            });
 
-    // Initialize animations on load and scroll
-    window.addEventListener('scroll', animateOnScroll);
-    window.addEventListener('load', () => {
-        animateOnScroll();
-        setTimeout(animateOnScroll, 100);
-    });
-</script>
+            const productRows = document.querySelectorAll('.product-row.animate');
+            const delayBetween = 300;
+
+            productRows.forEach((row, index) => {
+                const rowPosition = row.getBoundingClientRect().top;
+                const screenPosition = window.innerHeight / 1.3;
+                if (rowPosition < screenPosition) {
+                    setTimeout(() => {
+                        row.style.opacity = '1';
+                        row.style.transform = 'translateY(0)';
+                    }, index * delayBetween);
+                }
+            });
+        }
+
+        // Initialize all animate elements
+        document.querySelectorAll('.animate').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'all 0.8s cubic-bezier(0.25, 0.8, 0.25, 1)';
+            if (el.classList.contains('product-row')) {
+                el.style.transitionDelay = '0s';
+            }
+        });
+
+        // Counter animation
+        const counters = document.querySelectorAll('.counter');
+        const options = { threshold: 0.6 };
+
+        const animateCounter = (counter) => {
+            const updateCount = () => {
+                const target = +counter.getAttribute('data-target');
+                const count = +counter.innerText;
+                const speed = 100;
+                const increment = target / speed;
+
+                if (count < target) {
+                    counter.innerText = Math.ceil(count + increment);
+                    setTimeout(updateCount, 150);
+                } else {
+                    counter.innerText = target;
+                }
+            };
+            updateCount();
+        };
+
+        const observer = new IntersectionObserver((entries, obs) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateCounter(entry.target);
+                    obs.unobserve(entry.target);
+                }
+            });
+        }, options);
+
+        counters.forEach(counter => {
+            observer.observe(counter);
+        });
+
+        // Initialize animations on load and scroll
+        window.addEventListener('scroll', animateOnScroll);
+        window.addEventListener('load', () => {
+            animateOnScroll();
+            setTimeout(animateOnScroll, 100);
+        });
+    </script>
 
 
 </body>
+
 </html>

@@ -491,6 +491,7 @@ textarea.form-control {
 }
 
 
+
 /* Footer */
 footer {
     background-color: #222;
@@ -546,6 +547,48 @@ footer a:hover {
     text-decoration: none;
 }
 
+/* Social Links */
+footer .social-links a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    margin-right: 10px;
+    transition: all 0.3s ease;
+}
+
+footer .social-links a:hover {
+    background: var(--primary-color);
+    color: var(--white);
+    transform: translateY(-3px);
+}
+
+/* Copyright Section */
+footer .copyright {
+    background-color: #222;
+    /* Force background to dark */
+    color: #ccc;
+    font-size: 0.9rem;
+    padding-top: 2rem;
+    margin-top: 3rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+}
+
+footer .copyright a {
+    color: #ccc;
+    display: inline;
+    margin: 0 5px;
+    transition: all 0.3s ease;
+}
+
+footer .copyright a:hover {
+    color: var(--primary-light);
+    text-decoration: underline;
+}
 .social-links a {
     display: inline-block;
     width: 40px;

@@ -2,36 +2,32 @@
 session_start();
 include 'db.php';
 
-// ✅ Check if the admin is logged in
-if (!isset($_SESSION['admin_id'])) {
-    header("Location: admin_login.php");
-    exit();
-}
-
-$adminID = $_SESSION['admin_id']; // ✅ Get the logged-in admin's ID
-
-// Fetch admin details
-$sql = "SELECT username, email, full_name, dob, address, contact_number, employee_id FROM admin WHERE id = $adminID";
+// Fetch all messages
+$sql = "SELECT * FROM messages ORDER BY submitted_at DESC";
 $result = mysqli_query($conn, $sql);
-$admin = mysqli_fetch_assoc($result);
 
-// Fetch total messages
 $messageQuery = "SELECT COUNT(*) AS total FROM messages";
 $messageResult = mysqli_query($conn, $messageQuery);
 $messageData = mysqli_fetch_assoc($messageResult);
 $totalMessages = $messageData['total'];
+
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <title>CEYMOS LANKA Admin Dashboard</title>
+    <title>Admin - View Messages</title>
     <meta charset="UTF-8">
     <link rel="icon" type="image/png" href="assets/headLogos/h1.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- FontAwesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
     <style>
         body {
             display: flex;
@@ -94,11 +90,6 @@ $totalMessages = $messageData['total'];
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
 
-        .top-navbar-left {
-            display: flex;
-            align-items: center;
-        }
-
         .top-navbar-left h2 {
             display: flex;
             align-items: center;
@@ -133,42 +124,27 @@ $totalMessages = $messageData['total'];
 
         .main-content {
             flex: 1;
-            display: flex;
-            justify-content: center;
-            align-items: center;
             padding: 30px;
             overflow-y: auto;
             background-color: rgba(0, 0, 0, 0.1);
         }
 
-        .profile-card {
-            background-color: rgba(255, 255, 255, 0.84);
-            padding: 30px 40px;
+        .message-table {
+            background-color: rgba(255, 255, 255, 0.85);
+            padding: 20px;
             border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
-            max-width: 500px;
-            width: 100%;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
 
-        .profile-card h3 {
-            color: #1d3557;
-            margin-bottom: 20px;
+        table th,
+        table td {
             text-align: center;
-        }
-
-        .profile-card p {
-            font-size: 16px;
-            margin-bottom: 10px;
-        }
-
-        .profile-card p span {
-            font-weight: bold;
+            vertical-align: middle;
         }
     </style>
 </head>
 
 <body>
-
     <!-- Sidebar -->
     <div class="sidebar">
         <h4>CEYMOS LANKA</h4>
@@ -182,12 +158,12 @@ $totalMessages = $messageData['total'];
             <li>
                 <a href="messages_view.php">
                     <i class="fas fa-envelope"></i> Messages
-                    <span id="messageCount" class="badge badge-danger ml-2"><?php echo $totalMessages; ?></span>
+                    <span class="badge badge-danger ml-2"><?php echo $totalMessages; ?></span>
                 </a>
             </li>
-            <li><a href="admin_login.php"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
         </ul>
     </div>
+
 
     <!-- Content Area -->
     <div class="content-area">
@@ -195,7 +171,7 @@ $totalMessages = $messageData['total'];
         <!-- Top Navbar -->
         <div class="top-navbar">
             <div class="top-navbar-left">
-                <h2><i class="fas fa-user-circle"></i> <?php echo $admin['full_name']; ?></h2>
+                <h2><i class="fas fa-envelope"></i> Messages</h2>
             </div>
 
             <div class="top-navbar-right">
@@ -207,17 +183,39 @@ $totalMessages = $messageData['total'];
 
         <!-- Main Content -->
         <div class="main-content">
-            <div class="profile-card">
-                <h3>Admin Profile</h3>
-                <p><span>Full Name:</span> <?php echo $admin['full_name']; ?></p>
-                <p><span>Email:</span> <?php echo $admin['email']; ?></p>
-                <p><span>Date of Birth:</span> <?php echo $admin['dob']; ?></p>
-                <p><span>Address:</span> <?php echo $admin['address']; ?></p>
-                <p><span>Contact Number:</span> <?php echo $admin['contact_number']; ?></p>
-                <p><span>Employee ID:</span> <?php echo $admin['employee_id']; ?></p>
-                <p><span>Age:</span> <?php echo date('Y') - date('Y', strtotime($admin['dob'])); ?> years</p>
+            <div class="message-table">
+                <h3 class="text-center mb-4">Submitted Messages</h3>
+                <table class="table table-bordered table-striped">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Subject</th>
+                            <th>Message</th>
+                            <th>Submitted At</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?php while ($row = mysqli_fetch_assoc($result)) { ?>
+                            <tr>
+                                <td><?php echo $row['id']; ?></td>
+                                <td><?php echo htmlspecialchars($row['name']); ?></td>
+                                <td><?php echo htmlspecialchars($row['email']); ?></td>
+                                <td><?php echo htmlspecialchars($row['subject']); ?></td>
+                                <td><?php echo htmlspecialchars($row['message']); ?></td>
+                                <td><?php echo $row['submitted_at']; ?></td>
+                                <td>
+                                    <a href="delete_message.php?id=<?php echo $row['id']; ?>" class="btn btn-danger btn-sm" onclick="return confirm('Are you sure you want to delete this message?');">Delete</a>
+                                </td>
+                            </tr>
+                        <?php } ?>
+                    </tbody>
+                </table>
             </div>
         </div>
+
     </div>
 
     <script>
@@ -230,17 +228,9 @@ $totalMessages = $messageData['total'];
         updateDateTime();
 
         function logout() {
+            alert("Logging out...");
             window.location.href = "admin_login.php";
         }
-
-        // Live message count updater
-        setInterval(function () {
-            fetch('get_message_count.php')
-                .then(response => response.text())
-                .then(data => {
-                    document.getElementById('messageCount').textContent = data;
-                });
-        }, 3000);
     </script>
 
 </body>

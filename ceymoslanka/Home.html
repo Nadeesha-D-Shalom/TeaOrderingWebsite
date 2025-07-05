@@ -239,22 +239,24 @@
                     </div>
                 </div>
                 <div class="col-md-6">
-                    <form>
+                    <form action="contact_submit.php" method="POST">
                         <div class="form-group">
-                            <input class="form-control" type="text" placeholder="Your Name" required>
+                            <input class="form-control" type="text" name="name" placeholder="Your Name" required>
                         </div>
                         <div class="form-group">
-                            <input class="form-control" type="email" placeholder="Your Email" required>
+                            <input class="form-control" type="email" name="email" placeholder="Your Email" required>
                         </div>
                         <div class="form-group">
-                            <input class="form-control" type="text" placeholder="Subject">
+                            <input class="form-control" type="text" name="subject" placeholder="Subject">
                         </div>
                         <div class="form-group">
-                            <textarea class="form-control" rows="5" placeholder="Your Message" required></textarea>
+                            <textarea class="form-control" name="message" rows="5" placeholder="Your Message"
+                                required></textarea>
                         </div>
                         <button class="btn btn-primary btn-block" type="submit">Send Message <i
                                 class="fas fa-paper-plane ml-2"></i></button>
                     </form>
+
                 </div>
             </div>
         </div>
@@ -267,58 +269,60 @@
 
     </div>
 
-    
-  <!-- Footer -->
-  <footer class="text-light pt-5 pb-4">
-    <div class="container">
-      <div class="row">
 
-        <div class="col-lg-4 mb-4">
-          <h5>Ceymos Lanka</h5>
-          <p>Importers of premium Ceylon products including tea, spices, and coconut goods. Delivering quality
-            globally since 1990.</p>
-          <div class="mt-3">
-            <!-- <a href="#" class="btn btn-outline-light btn-sm">Our Certifications</a> -->
-          </div>
-        </div>
+    <!-- Footer -->
+    <footer class="text-light pt-5 pb-4">
+        <div class="container">
+            <div class="row">
 
-        <div class="col-lg-2 col-md-6 mb-4">
-          <h5>Quick Links</h5>
-          <a href="#home">Home</a>
-          <a href="#products">Products</a>
-          <a href="#about">About Us</a>
-          <a href="#contact">Contact</a>
-        </div>
+                <div class="col-lg-4 mb-4">
+                    <h5>Ceymos Lanka</h5>
+                    <p>Importers of premium Ceylon products including tea, spices, and coconut goods. Delivering quality
+                        globally since 1990.</p>
+                    <div class="mt-3">
+                        <!-- <a href="#" class="btn btn-outline-light btn-sm">Our Certifications</a> -->
+                    </div>
+                </div>
 
-        <div class="col-lg-3 col-md-6 mb-4">
-          <h5>Products</h5>
-          <a href="product-tea.html">Ceylon Tea</a>
-          <a href="coconut.html">Coconut Products</a>
-          <a href="Cinnamon.html">Spices</a>
-        </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h5>Quick Links</h5>
+                    <a href="#home">Home</a>
+                    <a href="#products">Products</a>
+                    <a href="#about">About Us</a>
+                    <a href="#contact">Contact</a>
+                </div>
 
-        <div class="col-lg-3 col-md-6 mb-4">
-          <h5>Connect With Us</h5>
-          <div class="social-links mt-3">
-            <a href="https://www.facebook.com/people/Ceymos-Lanka/61576319648785/"><i class="fab fa-facebook-f"></i></a>
-            <a href="https://www.instagram.com/ceymoslanka"><i class="fab fa-instagram"></i></a>
-            <!-- <a href="#"><i class="fab fa-youtube"></i></a>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h5>Products</h5>
+                    <a href="product-tea.html">Ceylon Tea</a>
+                    <a href="coconut.html">Coconut Products</a>
+                    <a href="Cinnamon.html">Spices</a>
+                </div>
+
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h5>Connect With Us</h5>
+                    <div class="social-links mt-3">
+                        <a href="https://www.facebook.com/people/Ceymos-Lanka/61576319648785/"><i
+                                class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/ceymoslanka"><i class="fab fa-instagram"></i></a>
+                        <!-- <a href="#"><i class="fab fa-youtube"></i></a>
             <a href="#"><i class="fab fa-whatsapp"></i></a> -->
-          </div>
-        </div>
+                    </div>
+                </div>
 
-      </div>
+            </div>
 
-      <!-- Copyright row should be INSIDE the container -->
-      <div class="row mt-4 copyright">
-        <div class="col text-center">
-          <small> &copy; 2025 Ceymos Lanka. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of
-              Service</a></small>
-        </div>
-      </div>
+            <!-- Copyright row should be INSIDE the container -->
+            <div class="row mt-4 copyright">
+                <div class="col text-center">
+                    <small> &copy; 2025 Ceymos Lanka. All rights reserved. | <a href="#">Privacy Policy</a> | <a
+                            href="#">Terms of
+                            Service</a></small>
+                </div>
+            </div>
 
-    </div> <!-- end container -->
-  </footer>
+        </div> <!-- end container -->
+    </footer>
 
     <!-- Back to top button -->
     <a href="#" class="back-to-top" id="backToTopBtn" title="Go to top">

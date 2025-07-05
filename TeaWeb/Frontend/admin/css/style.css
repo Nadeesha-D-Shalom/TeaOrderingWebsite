@@ -59,6 +59,51 @@ body {
   text-align: left;
   background-color: #fff; }
 
+  .add-admin-form {
+    margin: 0 auto;
+    max-width: 400px;
+    padding: 40px 30px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    color: #fff;
+}
+
+.add-admin-form h3 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #fff;
+}
+
+.add-admin-form .form-group {
+    margin-bottom: 20px;
+}
+
+.add-admin-form .form-control {
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    color: #fff;
+}
+
+.add-admin-form .form-control:focus {
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+}
+
+.add-admin-form .btn-primary {
+    width: 100%;
+    background: #007bff;
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+.add-admin-form .btn-primary:hover {
+    background: #0056b3;
+}
+
+
+
 [tabindex="-1"]:focus {
   outline: 0 !important; }
 

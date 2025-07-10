@@ -32,6 +32,8 @@ $totalMessages = $messageData['total'];
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/adminStyle.css">
     <style>
         body {
             display: flex;
@@ -40,129 +42,6 @@ $totalMessages = $messageData['total'];
             background: url('images/bg.jpg') no-repeat center center fixed;
             background-size: cover;
             margin: 0;
-        }
-
-        .sidebar {
-            width: 250px;
-            background-color: rgba(27, 38, 59, 0.95);
-            color: white;
-            padding: 20px;
-            min-height: 100vh;
-        }
-
-        .sidebar h4 {
-            color: #fca311;
-            margin-bottom: 30px;
-        }
-
-        .sidebar ul {
-            list-style: none;
-            padding-left: 0;
-        }
-
-        .sidebar ul li {
-            padding: 12px;
-            background-color: #2d3e50;
-            border-radius: 5px;
-            margin-bottom: 10px;
-            cursor: pointer;
-        }
-
-        .sidebar ul li:hover {
-            background-color: #3d4f64;
-        }
-
-        .sidebar ul li a {
-            color: white;
-            text-decoration: none;
-            display: block;
-        }
-
-        .content-area {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .top-navbar {
-            width: 100%;
-            background-color: rgba(255, 255, 255, 0.95);
-            padding: 15px 30px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-
-        .top-navbar-left {
-            display: flex;
-            align-items: center;
-        }
-
-        .top-navbar-left h2 {
-            display: flex;
-            align-items: center;
-            color: #1d3557;
-            margin: 0;
-        }
-
-        .top-navbar-left h2 i {
-            font-size: 30px;
-            margin-right: 10px;
-        }
-
-        .top-navbar-right {
-            display: flex;
-            align-items: center;
-        }
-
-        .top-navbar-right span {
-            margin-right: 20px;
-            font-weight: bold;
-            color: #1d3557;
-        }
-
-        .top-navbar-right button {
-            background-color: #e63946;
-            border: none;
-            padding: 8px 16px;
-            color: white;
-            border-radius: 4px;
-            cursor: pointer;
-        }
-
-        .main-content {
-            flex: 1;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 30px;
-            overflow-y: auto;
-            background-color: rgba(0, 0, 0, 0.1);
-        }
-
-        .profile-card {
-            background-color: rgba(255, 255, 255, 0.84);
-            padding: 30px 40px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
-            max-width: 500px;
-            width: 100%;
-        }
-
-        .profile-card h3 {
-            color: #1d3557;
-            margin-bottom: 20px;
-            text-align: center;
-        }
-
-        .profile-card p {
-            font-size: 16px;
-            margin-bottom: 10px;
-        }
-
-        .profile-card p span {
-            font-weight: bold;
         }
     </style>
 </head>
@@ -216,6 +95,15 @@ $totalMessages = $messageData['total'];
                 <p><span>Contact Number:</span> <?php echo $admin['contact_number']; ?></p>
                 <p><span>Employee ID:</span> <?php echo $admin['employee_id']; ?></p>
                 <p><span>Age:</span> <?php echo date('Y') - date('Y', strtotime($admin['dob'])); ?> years</p>
+
+                <p><span>Age:</span> <?php echo date('Y') - date('Y', strtotime($admin['dob'])); ?> years</p>
+
+                <hr>
+                <div class="text-center mt-3">
+                    <a href="update_password.php" class="btn btn-primary btn-sm mb-2">🔐 Update Password</a><br>
+                    <a href="delete_account.php" class="btn btn-danger btn-sm" onclick="return confirm('Are you sure you want to delete your account permanently?');">🗑️ Delete Account</a>
+                </div>
+
             </div>
         </div>
     </div>
@@ -234,7 +122,7 @@ $totalMessages = $messageData['total'];
         }
 
         // Live message count updater
-        setInterval(function () {
+        setInterval(function() {
             fetch('get_message_count.php')
                 .then(response => response.text())
                 .then(data => {

@@ -158,9 +158,10 @@ $totalMessages = $messageData['total'];
             <li>
                 <a href="messages_view.php">
                     <i class="fas fa-envelope"></i> Messages
-                    <span class="badge badge-danger ml-2"><?php echo $totalMessages; ?></span>
+                    <span id="messageCount" class="badge badge-danger ml-2"><?php echo $totalMessages; ?></span>
                 </a>
             </li>
+            <li><a href="admin_login.php"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
         </ul>
     </div>
 

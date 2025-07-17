@@ -20,7 +20,7 @@ $messageResult = mysqli_query($conn, $messageQuery);
 $messageData = mysqli_fetch_assoc($messageResult);
 $totalMessages = $messageData['total'];
 
-// Handle Add Tea Product
+// Handle Add Coconut Product
 $success = $error = "";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -29,7 +29,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $savePath = "";
     if (!empty($_FILES["image"]["name"])) {
-        $uploadDir = __DIR__ . "/../uploads/teaProduct/";
+        $uploadDir = __DIR__ . "/../uploads/cocnutProduct/";
         $imageName = time() . "_" . basename($_FILES["image"]["name"]);
         $targetFile = $uploadDir . $imageName;
 
@@ -41,10 +41,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     if (!$error) {
-        $sql = "INSERT INTO tea_products (name, description, image) VALUES ('$name', '$desc', '$savePath')";
+        $sql = "INSERT INTO coconut_products (name, description, image) VALUES ('$name', '$desc', '$savePath')";
         if (mysqli_query($conn, $sql)) {
-            $_SESSION['success_msg'] = "Tea product added successfully!";
-            header("Location: tea_manager.php");
+            $_SESSION['success_msg'] = "Coconut product added successfully!";
+            header("Location: coconut_manager.php");
             exit();
         } else {
             $error = "Database error while adding product.";
@@ -53,7 +53,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 
 // Fetch all tea products
-$products = mysqli_query($conn, "SELECT * FROM tea_products ORDER BY created_at DESC");
+$products = mysqli_query($conn, "SELECT * FROM coconut_products ORDER BY created_at DESC");
 
 // Show session message
 if (isset($_SESSION['success_msg'])) {
@@ -67,7 +67,7 @@ if (isset($_SESSION['success_msg'])) {
 
 <head>
     <meta charset="UTF-8">
-    <title>Tea Product Manager</title>
+    <title>Coconut Product Manager</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="assets/headLogos/h1.png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -173,7 +173,7 @@ if (isset($_SESSION['success_msg'])) {
             <!-- Add Product Form -->
             <div class="popup-form" id="addForm">
                 <form method="POST" enctype="multipart/form-data">
-                    <h4 class="text-center mb-4">Add New Tea Product</h4>
+                    <h4 class="text-center mb-4">Add New Coconut Product</h4>
                     <div class="form-group">
                         <label>Product Name</label>
                         <input type="text" name="name" class="form-control" required>
@@ -195,7 +195,7 @@ if (isset($_SESSION['success_msg'])) {
 
             <!-- Product Table -->
             <div class="card">
-                <div class="card-header bg-dark text-white"><strong>All Tea Products</strong></div>
+                <div class="card-header bg-dark text-white"><strong>All Coconut Products</strong></div>
                 <div class="table-responsive">
                     <table class="table table-bordered table-striped mb-0">
                         <thead class="thead-dark">
@@ -224,8 +224,8 @@ if (isset($_SESSION['success_msg'])) {
                                     </td>
                                     <td><?php echo $row['created_at']; ?></td>
                                     <td>
-                                        <a href="edit_tea.php?id=<?php echo $row['id']; ?>" class="btn btn-sm btn-warning">Edit</a>
-                                        <a href="delete_tea.php?id=<?php echo $row['id']; ?>" class="btn btn-sm btn-danger" onclick="return confirm('Are you sure you want to delete this tea product?');">Delete</a>
+                                        <a href="edit_coconut.php?id=<?php echo $row['id']; ?>" class="btn btn-sm btn-warning">Edit</a>
+                                        <a href="delete_coconut.php?id=<?php echo $row['id']; ?>" class="btn btn-sm btn-danger" onclick="return confirm('Are you sure you want to delete this tea product?');">Delete</a>
                                     </td>
                                 </tr>
                             <?php endwhile; ?>

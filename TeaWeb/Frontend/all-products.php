@@ -42,10 +42,11 @@ $result = mysqli_query($conn, $sql);
       <nav>
         <ul class="nav-links">
           <li><a href="Home.html">Home</a></li>
-          <li><a href="all-products.php">Products</a></li>
-          <li><a href="Home.html">About</a></li>
-          <li><a href="Home.html">Contact</a></li>
+          <li><a href="Home.html#products">Products</a></li>
+          <li><a href="Home.html#about">About</a></li>
+          <li><a href="Home.html#contact">Contact</a></li>
           <!-- <li><a href="https://www.google.co.uk/"><i class="fab fa-whatsapp"></i></a></li> -->
+
         </ul>
       </nav>
     </div>
@@ -153,14 +154,14 @@ $result = mysqli_query($conn, $sql);
         <div class="col-lg-2 col-md-6 mb-4">
           <h5>Quick Links</h5>
           <a href="Home.html">Home</a>
-          <a href="all-products.php">Products</a>
-          <a href="Home.html">About Us</a>
-          <a href="Home.html">Contact</a>
+          <a href="Home.html#products">Products</a>
+          <a href="Home.html#about">About Us</a>
+          <a href="Home.html#contact">Contact</a>
         </div>
 
         <div class="col-lg-3 col-md-6 mb-4">
           <h5>Products</h5>
-          <a href="product-tea.html">Ceylon Tea</a>
+          <a href="tea.php">Ceylon Tea</a>
           <a href="coconut.html">Coconut Products</a>
           <a href="Cinnamon.html">Spices</a>
         </div>

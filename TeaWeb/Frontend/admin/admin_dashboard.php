@@ -2,13 +2,13 @@
 session_start();
 include 'db.php';
 
-// ✅ Check if the admin is logged in
+//  Check if the admin is logged in
 if (!isset($_SESSION['admin_id'])) {
     header("Location: admin_login.php");
     exit();
 }
 
-$adminID = $_SESSION['admin_id']; // ✅ Get the logged-in admin's ID
+$adminID = $_SESSION['admin_id']; // Get the logged-in admin's ID
 
 // Fetch admin details
 $sql = "SELECT username, email, full_name, dob, address, contact_number, employee_id FROM admin WHERE id = $adminID";

@@ -1,27 +1,18 @@
-<?php
-include 'db.php';
-
-// Fetch all tea products from database
-$sql = "SELECT * FROM tea_products ORDER BY created_at DESC";
-$result = mysqli_query($conn, $sql);
-?>
-
-
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ceymos - Importers of Ceylon Quality</title>
+  <title>Ceymos | Coconut Products</title>
   <link rel="icon" type="image/png" href="assets/headLogos/h1.png">
 
 
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
-  <!-- All Product page CSS -->
-  <link rel="stylesheet" href="css/allProduct_Style.css">
+  <!-- Home page CSS -->
+  <link rel="stylesheet" href="css/coconut_Style.css">
 
   <!-- FontAwesome -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
@@ -29,6 +20,7 @@ $result = mysqli_query($conn, $sql);
   <link
     href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap"
     rel="stylesheet">
+
 
 </head>
 
@@ -53,24 +45,52 @@ $result = mysqli_query($conn, $sql);
   </header>
 
   <!-- Products Section (updated with multiple items per category) -->
-  <br> <br>
-  <section id="products" class="py-5">
+  <section id="products" class="section-offset">
     <div class="container">
       <h2 class="text-center mb-5">Our Products</h2>
 
-      <!-- Ceylon Tea Category -->
-      <!-- Ceylon Tea Category -->
+      <section id="sri-lankan-coconut" class="py-5">
+        <div class="container">
+          <h2 class="text-center mb-4">Sri Lankan Coconut Products</h2>
+          <p class="lead text-center">
+            Sri Lankan <strong>coconut products</strong> are famous worldwide for their <em>purity, freshness, and
+              organic quality</em>.
+            From coconut oil to coconut milk, desiccated coconut, and coconut sugar, all products are sourced
+            sustainably from
+            Sri Lanka’s finest farms.
+          </p>
+
+          <h4 class="mt-5">Health Benefits of Coconut Products</h4>
+          <ul class="list-unstyled">
+            <li>➤ <strong>Boosts Energy Levels</strong> – Provides natural healthy fats for sustained energy.</li>
+            <li>➤ <strong>Improves Heart Health</strong> – Supports good cholesterol (HDL) levels with healthy MCT fats.
+            </li>
+            <li>➤ <strong>Strengthens Immunity</strong> – Contains natural antibacterial and antiviral properties.</li>
+            <li>➤ <strong>Supports Digestive Health</strong> – Rich in fiber, helping improve digestion and gut health.
+            </li>
+            <li>➤ <strong>Promotes Healthy Skin & Hair</strong> – Widely used for moisturizing and nourishing skin and
+              hair.</li>
+          </ul>
+
+          <p class="mt-4 text-center font-italic">
+            <em>Ceylon’s coconut products bring wellness, nutrition, and natural goodness from Sri Lanka to your
+              home.</em>
+          </p>
+        </div>
+      </section>
+
+      <!-- Coconut Products Category -->
       <div class="product-category">
         <div class="category-header">
-          <h3 class="category-title">Ceylon Tea</h3>
-          <p>Premium quality teas from Sri Lanka's finest estates</p>
+          <h3 class="category-title">Coconut Products</h3>
+          <p>Pure and organic coconut goods from Sri Lanka’s trusted farms</p>
         </div>
 
         <div class="sub-items-grid">
           <?php while ($row = mysqli_fetch_assoc($result)): ?>
             <div class="sub-item-card animate">
               <a href="#">
-                <img src="<?php echo htmlspecialchars($row['image']); ?>" alt="Tea Image" class="sub-item-img">
+                <img src="<?php echo htmlspecialchars($row['image']); ?>" alt="Coconut Product Image" class="sub-item-img">
               </a>
               <div class="sub-item-content">
                 <h4 class="sub-item-title"><?php echo htmlspecialchars($row['name']); ?></h4>
@@ -80,54 +100,9 @@ $result = mysqli_query($conn, $sql);
           <?php endwhile; ?>
         </div>
       </div>
-
     </div>
 
-    <!-- Coconut Products Category -->
-    <div class="product-category">
-      <div class="category-header">
-        <h3 class="category-title">Coconut Products</h3>
-        <p>Organic coconut products from Sri Lankan plantations</p>
-      </div>
 
-      <div class="sub-items-grid">
-        <!-- Coconut Item 1 -->
-        <div class="sub-item-card animate">
-          <a href="coconut-oil.html">
-            <img src="sigiriya.jpg" class="sub-item-img" alt="Virgin Coconut Oil">
-          </a>
-          <div class="sub-item-content">
-            <h4 class="sub-item-title">Virgin Coconut Oil</h4>
-            <p class="sub-item-desc">Cold-pressed organic coconut oil for cooking and beauty</p>
-
-          </div>
-        </div>
-
-        <!-- Coconut Item 2 -->
-        <div class="sub-item-card animate">
-          <a href="coconut-milk.html">
-            <img src="sigiriya.jpg" class="sub-item-img" alt="Coconut Milk Powder">
-          </a>
-          <div class="sub-item-content">
-            <h4 class="sub-item-title">Coconut Milk Powder</h4>
-            <p class="sub-item-desc">Instant coconut milk powder for cooking and beverages</p>
-
-          </div>
-        </div>
-
-        <!-- Coconut Item 3 -->
-        <div class="sub-item-card animate">
-          <a href="coconut-sugar.html">
-            <img src="sigiriya.jpg" class="sub-item-img" alt="Coconut Sugar">
-          </a>
-          <div class="sub-item-content">
-            <h4 class="sub-item-title">Coconut Sugar</h4>
-            <p class="sub-item-desc">Natural sweetener with low glycemic index</p>
-
-          </div>
-        </div>
-      </div>
-    </div>
 
     <!-- View All Products Button -->
     <div class="text-center mt-5">
@@ -135,7 +110,6 @@ $result = mysqli_query($conn, $sql);
     </div>
     </div>
   </section>
-
 
   <!-- Footer -->
   <footer class="text-light pt-5 pb-4">
@@ -189,7 +163,7 @@ $result = mysqli_query($conn, $sql);
     </div> <!-- end container -->
   </footer>
 
-  <!-- Back to top button -->
+
   <a href="#" class="back-to-top" id="backToTopBtn" title="Go to top">
     <i class="fas fa-chevron-up"></i>
   </a>

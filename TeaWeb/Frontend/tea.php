@@ -11,7 +11,7 @@ $result = mysqli_query($conn, $sql);
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ceymos - Importers of Ceylon Quality</title>
+  <title>Ceymos - Tea Products </title>
   <link rel="icon" type="image/png" href="assets/headLogos/h1.png">
 
   <!-- Bootstrap CSS -->
@@ -31,9 +31,11 @@ $result = mysqli_query($conn, $sql);
       <nav>
         <ul class="nav-links">
           <li><a href="Home.html">Home</a></li>
-          <li><a href="#products">Products</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="Home.html#products">Products</a></li>
+          <li><a href="Home.html#about">About</a></li>
+          <li><a href="Home.html#contact">Contact</a></li>
+          <!-- <li><a href="https://www.google.co.uk/"><i class="fab fa-whatsapp"></i></a></li> -->
+
         </ul>
       </nav>
     </div>
@@ -42,6 +44,31 @@ $result = mysqli_query($conn, $sql);
   <section id="products" class="section-offset">
     <div class="container">
       <h2 class="text-center mb-5">Our Products</h2>
+
+      <section id="sri-lankan-tea" class="py-5">
+        <div class="container">
+          <h2 class="text-center mb-4">Sri Lankan Tea (Ceylon Tea)</h2>
+          <p class="lead text-center">
+            Sri Lankan tea, globally known as <strong>Ceylon Tea</strong>, is celebrated for its
+            <em>rich flavor, bright color, and refreshing aroma</em>. Grown in the lush highlands of Sri Lanka,
+            especially in regions like Nuwara Eliya, Kandy, and Uva, Ceylon Tea is considered one of the finest teas in the world.
+          </p>
+
+          <h4 class="mt-5">Health Benefits of Ceylon Tea</h4>
+          <ul class="list-unstyled">
+            <li>➤ <strong>Rich in Antioxidants</strong> – Helps fight free radicals and reduce the risk of chronic diseases.</li>
+            <li>➤ <strong>Boosts Heart Health</strong> – Supports healthy blood pressure and cholesterol levels.</li>
+            <li>➤ <strong>Enhances Immunity</strong> – Strengthens the immune system due to its natural compounds.</li>
+            <li>➤ <strong>Supports Digestion</strong> – Aids digestion and promotes gut health.</li>
+            <li>➤ <strong>Hydration & Mental Alertness</strong> – Keeps you hydrated while enhancing focus and concentration through moderate caffeine levels.</li>
+          </ul>
+
+          <p class="mt-4 text-center font-italic">
+            <em>Ceylon Tea is not just a drink — it’s a daily wellness ritual from the heart of Sri Lanka.</em>
+          </p>
+        </div>
+      </section>
+
 
       <!-- Ceylon Tea Category -->
       <!-- Ceylon Tea Category -->
@@ -83,9 +110,9 @@ $result = mysqli_query($conn, $sql);
         <div class="col-lg-2 col-md-6 mb-4">
           <h5>Quick Links</h5>
           <a href="Home.html">Home</a>
-          <a href="#products">Products</a>
-          <a href="#about">About Us</a>
-          <a href="#contact">Contact</a>
+          <a href="Home.html#products">Products</a>
+          <a href="Home.html#about">About Us</a>
+          <a href="Home.html#contact">Contact</a>
         </div>
         <div class="col-lg-3 col-md-6 mb-4">
           <h5>Products</h5>

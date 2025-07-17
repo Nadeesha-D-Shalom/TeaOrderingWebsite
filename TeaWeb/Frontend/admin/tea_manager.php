@@ -29,12 +29,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $savePath = "";
     if (!empty($_FILES["image"]["name"])) {
-        $uploadDir = __DIR__ . "/../uploads/";
+        $uploadDir = __DIR__ . "/../uploads/teaProduct/";
         $imageName = time() . "_" . basename($_FILES["image"]["name"]);
         $targetFile = $uploadDir . $imageName;
 
         if (move_uploaded_file($_FILES["image"]["tmp_name"], $targetFile)) {
-            $savePath = "uploads/" . $imageName;
+            $savePath = "uploads/teaProduct/" . $imageName;
         } else {
             $error = "Failed to upload image.";
         }

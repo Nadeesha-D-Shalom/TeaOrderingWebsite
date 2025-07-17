@@ -17,25 +17,26 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     //  Image Upload
     $imageName = "";
     if (!empty($_FILES["image"]["name"])) {
-        $targetDir = "../uploads/teaProduct";
+        $targetDir = "../uploads/cocnutProduct/";
         $imageName = time() . "_" . basename($_FILES["image"]["name"]);
         $targetFile = $targetDir . $imageName;
         move_uploaded_file($_FILES["image"]["tmp_name"], $targetFile);
     }
 
-    $sql = "INSERT INTO tea_products (name, description, image) VALUES ('$name', '$desc', '$imageName')";
+    $sql = "INSERT INTO coconut_products (name, description, image) VALUES ('$name', '$desc', '$imageName')";
     if (mysqli_query($conn, $sql)) {
-        $success = "Tea product added successfully!";
+        $success = "Coconut product added successfully!";
     } else {
         $error = "Failed to add product.";
     }
 }
 ?>
 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Add Tea Product</title>
+    <title>Add Coconut Product</title>
     <meta charset="UTF-8">
     <link rel="icon" href="../assets/headLogos/h1.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -43,7 +44,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </head>
 <body class="bg-light">
     <div class="container mt-5">
-        <h3 class="text-center mb-4">Add New Tea Product</h3>
+        <h3 class="text-center mb-4">Add New Coconut Product</h3>
 
         <?php if ($success) echo "<div class='alert alert-success'>$success</div>"; ?>
         <?php if ($error) echo "<div class='alert alert-danger'>$error</div>"; ?>
@@ -51,7 +52,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <form method="POST" enctype="multipart/form-data" class="bg-white p-4 rounded shadow">
             <div class="form-group">
                 <label>Product Name</label>
-                <input type="text" name="name" class="form-control" placeholder="Enter tea name" required>
+                <input type="text" name="name" class="form-control" placeholder="Enter Coconut name" required>
             </div>
 
             <div class="form-group">
@@ -64,8 +65,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <input type="file" name="image" accept="image/*" class="form-control-file">
             </div>
 
-            <button type="submit" class="btn btn-success">Add Tea Product</button>
-            <a href="tea_manager.php" class="btn btn-secondary">Back</a>
+            <button type="submit" class="btn btn-success">Add Coconut Product</button>
+            <a href="coconut_manager.php" class="btn btn-secondary">Back</a>
         </form>
     </div>
 </body>

@@ -2,7 +2,7 @@
 session_start();
 include 'db.php';
 
-// ✅ Only allow logged-in admins
+//  Only allow logged-in admins
 if (!isset($_SESSION['admin_id'])) {
     header("Location: admin_login.php");
     exit();
@@ -14,10 +14,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $name = mysqli_real_escape_string($conn, $_POST['name']);
     $desc = mysqli_real_escape_string($conn, $_POST['description']);
 
-    // ✅ Image Upload
+    //  Image Upload
     $imageName = "";
     if (!empty($_FILES["image"]["name"])) {
-        $targetDir = "../uploads/";
+        $targetDir = "../uploads/teaProduct";
         $imageName = time() . "_" . basename($_FILES["image"]["name"]);
         $targetFile = $targetDir . $imageName;
         move_uploaded_file($_FILES["image"]["tmp_name"], $targetFile);

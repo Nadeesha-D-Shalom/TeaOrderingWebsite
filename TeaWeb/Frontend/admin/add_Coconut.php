@@ -17,7 +17,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     //  Image Upload
     $imageName = "";
     if (!empty($_FILES["image"]["name"])) {
-        $targetDir = "../uploads/cocnutProduct/";
+        $targetDir = "../uploads/coconutProduct/";
         $imageName = time() . "_" . basename($_FILES["image"]["name"]);
         $targetFile = $targetDir . $imageName;
         move_uploaded_file($_FILES["image"]["tmp_name"], $targetFile);

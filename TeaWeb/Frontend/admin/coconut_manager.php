@@ -29,12 +29,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $savePath = "";
     if (!empty($_FILES["image"]["name"])) {
-        $uploadDir = __DIR__ . "/../uploads/cocnutProduct/";
+        $uploadDir = __DIR__ . "/../uploads/coconutProduct/";
         $imageName = time() . "_" . basename($_FILES["image"]["name"]);
         $targetFile = $uploadDir . $imageName;
 
         if (move_uploaded_file($_FILES["image"]["tmp_name"], $targetFile)) {
-            $savePath = "uploads/teaProduct/" . $imageName;
+            $savePath = "uploads/CoconutProduct/" . $imageName;
         } else {
             $error = "Failed to upload image.";
         }
@@ -52,7 +52,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 }
 
-// Fetch all tea products
+// Fetch all Coconut products
 $products = mysqli_query($conn, "SELECT * FROM coconut_products ORDER BY created_at DESC");
 
 // Show session message
@@ -128,7 +128,7 @@ if (isset($_SESSION['success_msg'])) {
         <h4>CEYMOS LANKA</h4>
         <ul>
             <li><a href="admin_dashboard.php"><i class="fas fa-home"></i> Dashboard</a></li>
-            <li><a href="tea_manager.php" class="active"><i class="fas fa-mug-hot"></i> Tea Product Manager</a></li>
+            <li><a href="Coconut_manager.php" class="active"><i class="fas fa-mug-hot"></i> Coconut Product Manager</a></li>
             <li><a href="coconut_manager.php"><i class="fas fa-seedling"></i> Coconut Product Manager</a></li>
             <li><a href="spices_manager.php"><i class="fas fa-pepper-hot"></i> Spices Product Manager</a></li>
             <li><a href="rice_manager.php"><i class="fas fa-utensils"></i> Rice Product Manager</a></li>
@@ -201,7 +201,7 @@ if (isset($_SESSION['success_msg'])) {
                         <thead class="thead-dark">
                             <tr>
                                 <th>#</th>
-                                <th>Tea Name</th>
+                                <th>Coconut Name</th>
                                 <th>Description</th>
                                 <th>Image</th>
                                 <th>Created At</th>
@@ -217,7 +217,7 @@ if (isset($_SESSION['success_msg'])) {
                                     <td><?php echo nl2br(htmlspecialchars($row['description'])); ?></td>
                                     <td>
                                         <?php if (!empty($row['image'])): ?>
-                                            <img src="../<?php echo $row['image']; ?>" alt="Tea" style="width: 80px; height: auto;">
+                                            <img src="../<?php echo $row['image']; ?>" alt="Coconut" style="width: 80px; height: auto;">
                                         <?php else: ?>
                                             <span class="text-muted">No image</span>
                                         <?php endif; ?>
@@ -225,7 +225,7 @@ if (isset($_SESSION['success_msg'])) {
                                     <td><?php echo $row['created_at']; ?></td>
                                     <td>
                                         <a href="edit_coconut.php?id=<?php echo $row['id']; ?>" class="btn btn-sm btn-warning">Edit</a>
-                                        <a href="delete_coconut.php?id=<?php echo $row['id']; ?>" class="btn btn-sm btn-danger" onclick="return confirm('Are you sure you want to delete this tea product?');">Delete</a>
+                                        <a href="delete_coconut.php?id=<?php echo $row['id']; ?>" class="btn btn-sm btn-danger" onclick="return confirm('Are you sure you want to delete this Coconut product?');">Delete</a>
                                     </td>
                                 </tr>
                             <?php endwhile; ?>

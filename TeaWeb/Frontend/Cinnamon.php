@@ -1,3 +1,11 @@
+<?php
+include 'db.php';
+
+// Fetch all tea products from database
+$sql = "SELECT * FROM coconut_products ORDER BY created_at DESC";   // Chanage the table name with the new one 
+$result = mysqli_query($conn, $sql);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 

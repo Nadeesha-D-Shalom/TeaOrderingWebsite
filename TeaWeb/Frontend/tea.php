@@ -69,8 +69,6 @@ $result = mysqli_query($conn, $sql);
         </div>
       </section>
 
-
-      <!-- Ceylon Tea Category -->
       <!-- Ceylon Tea Category -->
       <div class="product-category">
         <div class="category-header">

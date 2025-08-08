@@ -1,3 +1,11 @@
+<?php
+include 'db.php';
+
+// Fetch all tea products from database
+$sql = "SELECT * FROM coconut_products ORDER BY created_at DESC";
+$result = mysqli_query($conn, $sql);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -37,7 +45,7 @@
           <li><a href="Home.html#products">Products</a></li>
           <li><a href="Home.html#about">About</a></li>
           <li><a href="Home.html#contact">Contact</a></li>
-          <!-- <li><a href="https://www.google.co.uk/"><i class="fab fa-whatsapp"></i></a></li> -->
+          <li><a href="https://api.whatsapp.com/send/?phone=94771955100&text&type=phone_number&app_absent=0"><i class="fab fa-whatsapp"></i></a></li> 
 
         </ul>
       </nav>
@@ -80,8 +88,8 @@
       </section>
 
       <!-- Coconut Products Category -->
-      <div class="product-category">
-        <div class="category-header">
+        <div class="product-category mt-5">
+        <div class="category-header text-center mb-4">
           <h3 class="category-title">Coconut Products</h3>
           <p>Pure and organic coconut goods from Sri Lanka’s trusted farms</p>
         </div>

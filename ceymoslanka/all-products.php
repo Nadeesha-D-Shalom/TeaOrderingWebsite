@@ -45,7 +45,7 @@ $result = mysqli_query($conn, $sql);
           <li><a href="Home.html#products">Products</a></li>
           <li><a href="Home.html#about">About</a></li>
           <li><a href="Home.html#contact">Contact</a></li>
-          <!-- <li><a href="https://www.google.co.uk/"><i class="fab fa-whatsapp"></i></a></li> -->
+          <li><a href="https://api.whatsapp.com/send/?phone=94771955100&text&type=phone_number&app_absent=0"><i class="fab fa-whatsapp"></i></a></li> 
 
         </ul>
       </nav>

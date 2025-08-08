@@ -1,8 +1,8 @@
 <?php
 include 'db.php';
 
-// Fetch all tea products from database
-$sql = "SELECT * FROM coconut_products ORDER BY created_at DESC";   // Chanage the table name with the new one 
+// Fetch all cinnamon products from database
+$sql = "SELECT * FROM cinnamon_product ORDER BY created_at DESC";
 $result = mysqli_query($conn, $sql);
 ?>
 
@@ -44,71 +44,80 @@ $result = mysqli_query($conn, $sql);
           <li><a href="Home.html#products">Products</a></li>
           <li><a href="Home.html#about">About</a></li>
           <li><a href="Home.html#contact">Contact</a></li>
-          <!-- <li><a href="https://www.google.co.uk/"><i class="fab fa-whatsapp"></i></a></li> -->
+          <li><a href="https://api.whatsapp.com/send/?phone=94771955100&text&type=phone_number&app_absent=0"><i class="fab fa-whatsapp"></i></a></li>
 
         </ul>
       </nav>
     </div>
   </header>
 
-  <!-- Products Section (updated with multiple items per category) -->
+  <!-- Products Section (Updated with Multiple Items per Category) -->
   <section id="products" class="section-offset">
-    <h2>Our Cinnamon Products</h2>
+    <div class="container">
+      <h2 class="text-center mb-5">Our Products</h2>
 
-    <!-- Ceylon Tea Category -->
-    <div class="product-category">
-      <div class="category-header">
-        <h3 class="category-title">Ceylon Spices Items</h3>
-        <p>Premium quality teas from Sri Lanka's finest estates</p>
+      <!-- Sri Lankan Cinnamon Products Section -->
+      <section id="sri-lankan-cinnamon" class="py-5">
+        <div class="container">
+          <h2 class="text-center mb-4">Sri Lankan Cinnamon Products</h2>
+          <p class="lead text-center">
+            Sri Lankan <strong>Ceylon Cinnamon</strong>, also known as <em>"true cinnamon"</em>,
+            is prized worldwide for its sweet aroma, delicate flavor, and numerous health benefits.
+            Grown mainly in Sri Lanka’s southern coastal belt, it is carefully hand-rolled into thin golden-brown quills,
+            ensuring unmatched quality and purity.
+          </p>
+
+          <h4 class="mt-5">Health Benefits of Ceylon Cinnamon</h4>
+          <ul class="list-unstyled">
+            <li>➤ <strong>Rich in Antioxidants</strong> – Helps combat oxidative stress and supports overall wellness.</li>
+            <li>➤ <strong>Supports Heart Health</strong> – Helps maintain healthy blood pressure and cholesterol levels.</li>
+            <li>➤ <strong>Promotes Healthy Digestion</strong> – Traditionally used to aid digestion and reduce discomfort.</li>
+            <li>➤ <strong>Anti-Inflammatory Properties</strong> – May help reduce inflammation in the body.</li>
+            <li>➤ <strong>Helps Regulate Blood Sugar</strong> – Can assist in maintaining stable blood sugar levels.</li>
+          </ul>
+
+          <p class="mt-4 text-center font-italic">
+            <em>Experience the unmatched aroma, flavor, and health benefits of Sri Lanka’s world-famous Ceylon Cinnamon.</em>
+          </p>
+        </div>
+      </section>
+
+      <!-- Cinnamon Products Category -->
+      <div class="product-category mt-5">
+        <div class="category-header text-center mb-4">
+          <h3 class="category-title">Cinnamon Products</h3>
+          <p>Premium Ceylon cinnamon and cinnamon-based products from Sri Lanka’s finest farms</p>
+        </div>
+
+        <div class="sub-items-grid">
+          <?php while ($row = mysqli_fetch_assoc($result)): ?>
+            <div class="sub-item-card animate">
+              <a href="#">
+                <img src="<?php echo htmlspecialchars($row['image']); ?>"
+                  alt="Cinnamon Product Image"
+                  class="sub-item-img">
+              </a>
+              <div class="sub-item-content">
+                <h4 class="sub-item-title">
+                  <?php echo htmlspecialchars($row['name']); ?>
+                </h4>
+                <p class="sub-item-desc">
+                  <?php echo htmlspecialchars($row['description']); ?>
+                </p>
+              </div>
+            </div>
+          <?php endwhile; ?>
+        </div>
       </div>
 
-      <div class="sub-items-grid">
-        <!-- Tea Item 1 -->
-        <div class="sub-item-card animate">
-          <a href="black-tea.html">
-            <img src="sigiriya.jpg" class="sub-item-img" alt="Ceylon Black Tea">
-          </a>
-          <div class="sub-item-content">
-            <h4 class="sub-item-title">Coconut Oil</h4>
-            <p class="sub-item-desc">Cold-pressed organic coconut oil for cooking and beauty</p>
-
-          </div>
-        </div>
-
-        <!-- Tea Item 2 -->
-        <div class="sub-item-card animate">
-          <a href="green-tea.html">
-            <img src="sigiriya.jpg" class="sub-item-img" alt="Ceylon Green Tea">
-          </a>
-          <div class="sub-item-content">
-            <h4 class="sub-item-title">Coconut Milk Powder</h4>
-            <p class="sub-item-desc">Instant coconut milk powder for cooking and beverages.</p>
-
-          </div>
-        </div>
-
-        <!-- Tea Item 3 -->
-        <div class="sub-item-card animate">
-          <a href="white-tea.html">
-            <img src=" sigiriya.jpg" class="sub-item-img" alt="Ceylon White Tea">
-          </a>
-          <div class="sub-item-content">
-            <h4 class="sub-item-title">Coconut Sugar</h4>
-            <p class="sub-item-desc">Natural sweetener with low glycemic index.</p>
-
-          </div>
-        </div>
-      </div>
     </div>
-
-
 
     <!-- View All Products Button -->
     <div class="text-center mt-5">
       <a href="all-products.html" class="btn btn-primary">View All Products</a>
     </div>
-    </div>
   </section>
+
 
 
   <!-- Footer -->
@@ -137,7 +146,7 @@ $result = mysqli_query($conn, $sql);
           <h5>Products</h5>
           <a href="tea.php">Ceylon Tea</a>
           <a href="coconut.html">Coconut Products</a>
-          <a href="Cinnamon.html">Spices</a>
+          <a href="Cinnamon.php">Cinnamon</a>
         </div>
 
         <div class="col-lg-3 col-md-6 mb-4">

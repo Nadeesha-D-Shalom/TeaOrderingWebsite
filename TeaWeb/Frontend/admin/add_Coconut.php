@@ -1,6 +1,7 @@
 <?php
 session_start();
-include 'db.php';
+include '../db.php';
+// edit
 
 //  Only allow logged-in admins
 if (!isset($_SESSION['admin_id'])) {

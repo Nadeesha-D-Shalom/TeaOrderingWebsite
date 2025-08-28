@@ -1,5 +1,5 @@
 <?php
-include 'db.php';
+include '../db.php';
 
 // Fetch all tea products from database
 $sql = "SELECT * FROM coconut_products ORDER BY created_at DESC";

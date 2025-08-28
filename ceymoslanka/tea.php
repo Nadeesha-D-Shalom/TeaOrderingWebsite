@@ -1,10 +1,13 @@
 <?php
-include 'db.php';
+include '../db.php';
 
 // Fetch all tea products from database
+
+// this is tea 
 $sql = "SELECT * FROM tea_products ORDER BY created_at DESC";
 $result = mysqli_query($conn, $sql);
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -140,3 +143,4 @@ $result = mysqli_query($conn, $sql);
 </body>
 
 </html>
+

@@ -1,62 +1,95 @@
-https://ceymoslanka.com
+# 🍵 Tea Website
 
-TeaWeb - Product Showcase Website with Admin Panel
+A simple and elegant **Tea Shop Product Showcase Website**, built with **pure HTML, CSS, and JavaScript**.
+This project is designed to display tea products with an attractive front-end layout and smooth animations. The site is fully responsive, lightweight, and optimized for deployment on shared hosting (e.g., GoDaddy).
 
-This is a simple tea product showcase website with a secure Admin Login and Admin Dashboard, built for a real-world client.
+---
+Live on: - https://ceymoslanka.com
 
-Features
-Product showcase (Tea, Coconut, Spices, Rice)
+## 📌 Features
 
-Admin login (PHP + MySQL)
+* 🏠 **Home Page** – Engaging landing page with hero section and introduction.
+* 🍃 **Products Page** – Showcase of different tea products with descriptions and images.
+* ℹ️ **About Page** – Story of the tea shop, mission, and values.
+* 📞 **Contact Page** – Contact form, address, and map for customer inquiries.
+* 🎨 **Custom Styling** – Fully designed with **vanilla HTML, CSS, JS** (no external libraries like Bootstrap).
+* 📱 **Responsive Design** – Works across desktop, tablet, and mobile devices.
+* ✨ **Smooth Animations** – Custom CSS animations for a modern look.
 
-Admin dashboard to manage products
+---
 
-Add / Edit / Delete products
+## 📂 Project Structure
 
-Upload product images
+```
+TeaWebsite/
+│── index.html          # Home page  
+│── products.html       # Products showcase page  
+│── about.html          # About us page  
+│── contact.html        # Contact page  
+│── /css/               # Custom CSS stylesheets  
+│── /js/                # JavaScript for interactivity  
+│── /images/            # Images used in the site  
+│── README.md           # Project documentation  
+```
 
-Date and time display
+---
 
-Logout button
+## 🚀 Deployment
 
-Responsive design (HTML, CSS, JS)
+The project is built for **static hosting** and can be easily deployed on:
 
-No external frameworks used
+* 🌐 **GoDaddy Shared Hosting** (via FileZilla FTP)
+* 📦 GitHub Pages
+* ☁️ Netlify / Vercel
 
-Technologies
-HTML
+Simply upload the project files to the hosting server’s **public_html** (or root) directory.
 
-CSS
+---
 
-JavaScript
+## 🛠️ Technologies Used
 
-PHP
+* **HTML5** – Markup structure
+* **CSS3** – Styling, layout, animations
+* **JavaScript (Vanilla)** – Basic interactivity
+* **FileZilla** – Deployment tool for FTP (GoDaddy hosting)
 
-MySQL
+---
 
-XAMPP (for local testing)
+## 📸 Screenshots (Add Later)
 
-How to Run
-Place project folder in C:/xampp/htdocs/TeaWeb/
+*(You can add screenshots or demo GIFs here to showcase the site design.)*
 
-Create database tea_ordering_db and import tables
+---
 
-Configure db.php with your database details
+## 🔮 Future Enhancements
 
-Run:
+* ✅ Admin panel for managing tea products (PHP + MySQL planned)
+* ✅ Ability to embed YouTube videos for product promotions
+* ✅ Product filtering and search functionality
+* ✅ Blog/News section for tea culture & recipes
 
-http://localhost/TeaWeb/index.html → Main site
+---
 
-http://localhost/TeaWeb/admin/admin_login.php → Admin login
+## 📜 Version History
+
+* **v1.0.0** – Initial static website with Home, Products, About, Contact pages.
+* **v1.1.0** – Added responsive design and animations.
+* **v2.0.0** *(Planned)* – Admin panel + database integration.
+
+---
+
+## 👨‍💻 Author
+
+Developed by **[Nadeesha D Shalom](https://github.com/Nadeesha-D-Shalom)**
+📧 Contact: [your-email@example.com](mailto:your-email@example.com)
+🔗 LinkedIn: [Your LinkedIn Profile](https://linkedin.com/in/...)
+
+---
+
+## 📄 License
+
+This project is licensed under the **MIT License** – feel free to use, modify, and distribute.
+
+---
 
 
-Admin Login (Demo)
-yaml
-Copy
-Edit
-Username: admin
-Password: 1234
-Deployment
-Project ready for deployment on GoDaddy Shared Hosting.
-
-That’s it — simple, professional.
